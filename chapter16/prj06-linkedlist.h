@@ -6,13 +6,11 @@
 // 가이드: 문자열 name과 다음 노드 포인터 next를 가진 자기참조 구조체를 정의하세요.
 struct linked_list {
     char* name;
-    [                   ] next;
+    struct linked_list * nest;
 };
 
-// 가이드: struct linked_list를 NODE로, NODE*를 LINK로 재정의하세요.
-typedef [                  ] NODE;
-typedef [                  ] LINK;
 
-LINK createNode(char* name);
-LINK append(LINK head, LINK cur);
-int printList(LINK head);
+
+// 가이드: struct linked_list를 NODE로, NODE*를 LINK로 재정의하세요.
+typedef struct linked_list NODE;
+typedef NODE* LINK;
